@@ -72,7 +72,7 @@ animal_test.c - a test driver. We can run this to expose a simple
 command-line interface to your animal types. The test driver
 implements the following four commands:
 
-adopt <type> <name> - create a new animal object, and add it to your
+adopt <type> <name> - create a new animal object, and add it to our
 menagerie.
 
 train <name> <command> <response> - train an animal by calling the
@@ -84,94 +84,142 @@ calling the animal_command() function on the animal named <name>.
 quit - terminates the program
 
 
-You must create at least a new file named animal.c (and probably
-others too). You can compile the test with a command like:
+We must create at least a new file named animal.c (and probably
+others too). We can compile the test with a command like:
 
    gcc -o animal_test animal_test.c animal.c
 
-You may add other source files to the compilation command as needed.
+We can add other source files to the compilation command as needed.
 
 
 Here is a sample run of a fully function test program. Because of the
-random nature of a cat's or parrot's responses, your output (or even
+random nature of a cat's or parrot's responses, our output (or even
 subsequent runs of this test program) won't look *exactly* the same as
 this:
 
 > command fido sit
+
 No pet named fido
 > adopt dog fido
+
 > command fido sit
+
 fido: woof
 > train fido sit sits
+
 > command fido sit
+
 fido: woof
 > train fido sit sits
+
 > train fido sit sits
+
 > command fido sit
+
 fido: sits
 > adopt cat tuna
+
 > train tuna play_dead plays_dead
+
 > train tuna play_dead plays_dead
+
 > train tuna play_dead plays_dead
+
 > command tuna play_dead
+
 tuna: meow
 > command tuna play_dead
+
 tuna: meow
 > command tuna play_dead
+
 tuna: purr
 > adopt parrot spike
+
 > command spike hello
+
 spike: squawk!
 > train spike hello hello
+
 > command spike hello
+
 spike: squawk!
 > command spike hello
+
 spike: hello
 > train spike hello hello
+
 > train spike hello hello
+
 > command spike hello
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > train spike pretty_bird pretty_bird
+
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: pretty_bird
 > command spike pretty_bird
+
 spike: pretty_bird
 > command spike pretty_bird
+
 spike: hello
 > command spike pretty_bird
+
 spike: pretty_bird
 > train spike pretty_bird pretty_bird
+
 > train spike pretty_bird pretty_bird
+
 > train spike pretty_bird pretty_bird
+
 > command spike pretty_bird
+
 spike: pretty_bird
 > command spike hello
+
 spike: hello
 > adopt dog sammy
+
 > train sammy speak BARK
+
 > train sammy speak BARK
+
 > train sammy speak BARK
+
 > command sammy speak
+
 sammy: BARK
 > command sammy sit
+
 sammy: woof
 > command fido speak
+
 fido: woof
 > command fido sit
+
 fido: sits
 > quit
 
